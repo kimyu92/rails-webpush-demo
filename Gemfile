@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-gem 'webpush', '~> 0.3.2'
+gem 'webpush', '~> 0.3.7'
 gem 'serviceworker-rails', '~> 0.5.5'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -28,7 +28,6 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 
 gem 'jbuilder', '~> 2.8'
-gem 'jwt', '~> 1.5.6'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
