@@ -19,3 +19,9 @@ ngrok http 3000
 ```
 
 Browse to the website [https://ngrokSubDomain.ngrok.io](https://ngrokSubDomain.ngrok.io) and click to send yourself a notification.
+
+##### Browser Compatibility List for [Service Workers](https://caniuse.com/#feat=serviceworkers) + [Push API](https://caniuse.com/#feat=push-api)
+
+IE11 | Edge | Chrome | Firefox | Safari | Opera | UC Browser
+-------|------|--------|---------|--------|-------|------------
+:heavy_multiplication_x: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_multiplication_x: | :heavy_check_mark: | :heavy_check_mark:
