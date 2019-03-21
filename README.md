@@ -1,6 +1,6 @@
 ## Setup and Install Dependencies
 
-- Setup .env
+- Setup `.env` by referring to `.env.sample`
 - Run the script below
 
 ```bash
@@ -8,9 +8,9 @@
 bundle install
 
 # Once it's all installed  run a db migrate
-rails db:migrate
+rails db:migrate db:seed
 # repeat? reset db
-rails db:reset db:migrate
+rails db:drop db:migrate db:seed
 
 # start the server
 rails s
@@ -18,4 +18,4 @@ rails s
 ngrok http 3000
 ```
 
-Browse to the website [https://<ngrok-sub-domain>.ngrok.io](https://<ngrok-sub-domain>.ngrok.io) and click to send yourself a notification.
+Browse to the website [https://ngrokSubDomain.ngrok.io](https://ngrokSubDomain.ngrok.io) and click to send yourself a notification.

@@ -10,6 +10,21 @@
 
 	<div class="row">
 		<div class="col-md-12">
+			<% @users.each do |user| %>
+				<div class="form-check">
+				  <input class="form-check-input" type="radio" name="input-radio-user-email" id="input-radio-user-email-<%= user.id %>" value="<%= user.email %>">
+				  <label class="form-check-label" for="input-radio-user-email-<%= user.id %>">
+				    <%= user.name %> - <%= user.email %>
+				  </label>
+				</div>
+			<% end %>
+		</div>
+	</div>
+
+	<br>
+
+	<div class="row">
+		<div class="col-md-12">
 			<div class="input-group flex-nowrap">
 			  <div class="input-group-prepend">
 			    <span class="input-group-text" id="addon-wrapping">Message</span>
@@ -18,7 +33,7 @@
 			</div>
 
 			<br>
-			<button type="button" class="btn btn-primary" onclick="clickToSendPush()">
+			<button type="button" class="btn btn-primary" onclick="getKeys()">
 				Send WebPush
 			</button>
 		</div>
@@ -27,9 +42,16 @@
 
 <script>
 	function sendPush(subscription) {
+		var userEmail = $('input[name="input-radio-user-email"]:checked').val();
+		console.log(userEmail);
+		if (!userEmail) {
+			return;
+		}
+
 		$.post('/send_push', {
 			subscription: subscription,
 			message: $('#input-message').val().trim(),
+			user_email: userEmail,
 		});
 	}
 
@@ -52,9 +74,9 @@
       });
   }
 
-	function clickToSendPush() {
-		getKeys(false)
-	}
+	// function clickToSendPush() {
+	// 	getKeys(false)
+	// }
 
 	var vapidPublicKey = new Uint8Array(<%=Base64.urlsafe_decode64(ENV['VAPID_PUBLIC']).bytes%>);
 

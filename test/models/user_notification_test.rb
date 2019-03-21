@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class NotificationDatumTest < ActiveSupport::TestCase
+class UserNotificationTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

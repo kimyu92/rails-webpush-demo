@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+[
+  { name: 'John Doe', email: 'john.doe@example.com' },
+  { name: 'Mary Poppins', email: 'mary.poppins@example.com' },
+].each do |user_info|
+  User.find_or_create_by!(
+    name: user_info[:name],
+    email: user_info[:email],
+  )
+end

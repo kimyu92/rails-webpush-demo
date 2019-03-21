@@ -1,11 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  notification_id: 1
-  name: MyString
-  auth_key: 1
+  name: Test 1
+  email: 'test.1@example.com'
 
 two:
-  notification_id: 1
-  name: MyString
-  auth_key: 1
+  name: Test 2
+  email: 'test.2@example.com'
