@@ -1,0 +1,69 @@
+# Environment variables loaded by dotenv
+.env
+.env.*
+!.env.sample
+!.env.test
+
+# Ignore bundler config
+/.bundle
+yarn-error.log
+
+# Ignore Byebug history
+.byebug_history
+
+# Ignore the default SQLite database.
+/db/*.sqlite3
+
+# Ignore the transfer sql
+/db/transfer.sql
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+
+/config/database.yml
+
+# Ignore Mac's DS_Store files
+.DS_Store
+
+#intellij
+.idea
+
+# Test reports
+/reports
+
+# Code coverage
+coverage
+
+# Brakeman
+reports/brakeman.html
+
+# Rubocop
+reports/rubocop.html
+
+# Test screenshots
+reports/screenshots
+
+# RubyMine?
+.project
+
+# Capybara screehshots
+reports/screenshots
+
+# React on Rails
+npm-debug.log*
+node_modules
+
+# Generated assets
+/public/assets
+
+# Pry config
+.pryrc
+
+# QA screenshots
+system/screenshots
+
+dump.rdb
+
+# ring central logs
+/pubnub.log
